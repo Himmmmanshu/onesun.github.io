@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OneSun - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Container for centering with 0.5in margin each side */
+    .container {
+      
+      max-width: calc(100% - 1in); /* full width minus total 1 inch margin (0.5in each side) */
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 2in;
+      padding-right: 2in;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+    }
+
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #ffffff;
+      }
+  
+      .company-name {
+          font-size: 4rem;
+          font-weight: 1000;
+          display: flex;
+          align-items: center;
+          gap: 0.2rem;
+        }
+        .company-name .os {
+          color: #fa6939;
+        }
+        .company-name .neun {
+          color: #3e577c;
+      }
+
+    .company-name {
+      font-size: 4rem;
+      font-weight: 1000;
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+    }
+
+    /* Ribbon */
+    .ribbon {
+      background-color: #3e577c;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 20px;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .ribbon div:first-child span {
+      color: #fa6939; /* OneSun color */
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    .ribbon div:last-child span.phone,
+    .ribbon div:last-child span.email {
+      color: #ffffff;
+      margin-left: 5px;
+    }
+
+    .ribbon div:last-child span.icon {
+      color: #fa6939; /* icons orange */
+      margin-right: 3px;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+
+    nav a {
+      padding: 12px 18px;
+      text-decoration: none;
+      color: #5e5434;
+      font-weight: 500;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #fa6939;
+      color: #ffffff;
+    }
+
+    /* Banner / Slideshow */
+    .banner {
+      position: relative;
+      overflow: hidden;
+      height: 60vh;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(60%);
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+        <div class="company-name">
+          <span class="os">O</span><span class="neun">ne</span><span class="os">S</span><span class="neun">un</span>
+        </div>
+        <div class="logo">
+            <img src="logo.png" alt="OneSun Logo">
+          </div>      
+      </header>
+
+    <!-- Ribbon -->
+    <div class="ribbon">
+      <div>
+        <span>OneSun</span> Stainless Steel That Shines with Quality
+      </div>
+      <div>
+        <span class="icon">📞</span><span class="phone">999999999999</span> &nbsp; | &nbsp;
+        <span class="icon">✉️</span><span class="email">onesun@gmail.com</span>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+      <img src="banner.jpg" alt="Slideshow Banner" />
+      <div class="banner-text">Premium Stainless Steel Solutions</div>
+    </section>
+  </div>
+</body>
+</html>

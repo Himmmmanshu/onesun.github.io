@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Company - Home</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    .hero {
+      background: url('banner.jpg') center center/cover no-repeat;
+      position: relative;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #91ebee; /* Golden yellow */
+    }
+  
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(15, 15, 15, 0.603); /* Dim background */
+      z-index: 0;
+    }
+  
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 0 10px #ffffff, 0 0 20px #a3a3a3;
+    }
+  
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+  
+    .hero p.lead {
+      font-size: 1.25rem;
+      margin-top: 10px;
+    }
+  </style>
+  
+</head>
+<body>
+
+  <!-- Banner / Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Welcome to OneSun</h1>
+      <p class="lead">We deliver quality solutions that empower your business</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">About Us</h2>
+      <p class="text-center">
+        My Company is a leading provider of innovative solutions, focused on helping businesses grow and adapt in a rapidly changing digital world. 
+        With a passionate team and customer-first approach, we bring ideas to life.
+      </p>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center p-3">
+    &copy; 2025 My Company. All rights reserved.
+  </footer>
+
+</body>
+</html>

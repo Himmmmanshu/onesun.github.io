@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OneSun - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Container for centering with 0.5in margin each side */
+    .container {
+        max-width: 1200px;         /* Max width to avoid stretching too far on large screens */
+        margin: 0 auto;            /* Center the container horizontally */
+        padding: 0 1vw;            /* 2% of the viewport width padding on left and right */
+        box-sizing: border-box;   /* Ensures padding doesn’t overflow container width */
+      }
+      
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+    }
+
+
+     /* PromoBanner */
+
+     .promo-banner {
+        width: 100%;
+        background-color: #11245a; /* bright green */
+        color: white;
+        text-align: center;
+        padding: 1.2px 0;            /* Reduced from 10px to 4px */
+        font-size: 1rem;         /* Slightly smaller font */
+        font-weight: 600;
+      }
+      
+      .promo-banner .highlight {
+        color: #FE5D26; /* orange color for "Discount" */
+      }
+      
+    
+
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #ffffff;
+      }
+  
+      .company-name {
+          font-size: 4rem;
+          font-weight: 1000;
+          display: flex;
+          align-items: center;
+          gap: 0.2rem;
+        }
+        .company-name .os {
+          color: #fa6939;
+        }
+        .company-name .neun {
+          color: #3e577c;
+      }
+
+    .company-name {
+      font-size: 4rem;
+      font-weight: 1000;
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+    }
+
+    /* Ribbon */
+    .ribbon {
+      background-color: #3e577c;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 20px;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .ribbon div:first-child span {
+      color: #fa6939; /* OneSun color */
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    .ribbon div:last-child span.phone,
+    .ribbon div:last-child span.email {
+      color: #ffffff;
+      margin-left: 5px;
+    }
+
+    .ribbon div:last-child span.icon {
+      color: #fa6939; /* icons orange */
+      margin-right: 3px;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+
+    nav a {
+      padding: 12px 18px;
+      text-decoration: none;
+      color: #5e5434;
+      font-weight: 500;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #fa6939;
+      color: #ffffff;
+    }
+
+    /* Banner / Slideshow */
+    .banner {
+      position: relative;
+      overflow: hidden;
+      height: 60vh;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(50%);
+    }
+
+    .banner-text {
+      position: absolute;
+      font-family:  Georgia, serif;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+
+    /* About / footer */
+
+
+    .about {
+        background: linear-gradient(to bottom right, #f7f7f7, #e8e8e8);
+        padding: 60px 20px;
+        text-align: center;
+      }
+      
+      .about h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #3e577c;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 2px #ccc;
+      }
+      
+      .about p {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        color: #444;
+        line-height: 1.7;
+      }
+      
+      footer {
+        background-color: #000; /* Black background */
+        color: #fff;
+        text-align: center;
+        padding: 16px;
+        font-size: 0.95rem;
+      }
+      
+    /* Slideshow  */
+
+      .slideshow {
+        position: relative;
+        max-width: 100%;
+        height: 60vh;
+        overflow: hidden;
+      }
+      
+      .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .slide-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+      
+      .slide-image.active {
+        opacity: 1;
+      }
+      
+   
+        /* Add this at the bottom of the <style> */
+    @media (max-width: 1000px) {
+        .container {
+            padding: 0 5vw;
+          }
+        }
+
+      
+  </style>
+</head>
+<body>
+
+    <!-- Promo Banner -->
+<div class="promo-banner">
+    <p><span class="highlight">  </span> Buy More, Save More – Bulk Order Discounts Available!</p>
+  </div>
+  
+  <div class="container">
+    <header>
+        <div class="company-name">
+          <span class="os">O</span><span class="neun">ne</span><span class="os">S</span><span class="neun">un</span>
+        </div>
+        <div class="logo">
+            <img src="logo.png" alt="OneSun Logo">
+          </div>      
+      </header>
+
+    <!-- Ribbon -->
+    <div class="ribbon">
+      <div>
+        <span>OneSun</span> Stainless Steel That Shines with Quality
+      </div>
+      <div>
+        <span class="icon">📞</span><span class="phone">999999999999</span> &nbsp; | &nbsp;
+        <span class="icon">✉️</span><span class="email">onesun@gmail.com</span>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+      <img src="banner.jpg" alt="Slideshow Banner" />
+      <div class="banner-text">Premium Stainless Steel Solutions</div>
+    </section>
+
+
+    <!-- About Section -->
+  <section class="about bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">About Us</h2>
+      <p class="text-center">
+        At OneSun, we believe that great design starts with strong foundations. As a trusted name in stainless steel hardware, we offer a wide range of high-quality products including curtain pipe supporters, door handles, door hangers, cupboard chtakani, and more.
+
+Crafted with precision and built to last, our hardware combines durability, style, and reliability – perfect for modern homes and commercial spaces. With a focus on customer satisfaction and consistent quality, OneSun is committed to making every detail count.
+
+OneSun – Strong. Stylish. Reliable.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Slideshow Section -->
+<section class="slideshow">
+    <div class="slideshow-container">
+      <img src="image2.jpg" class="slide-image active" alt="Slideshow Image">
+      <img src="banner.jpg" class="slide-image" alt="Slideshow Image">
+      
+    </div>
+  </section>
+  
+
+  <footer class="bg-dark text-white text-center p-3">
+    &copy; 2025 My Company. All rights reserved.
+  </footer>
+  </div>
+</body>
+
+
+<!-- Java Script for Slideshow -->
+
+<script>
+    let slides = document.querySelectorAll('.slide-image');
+    let current = 0;
+  
+    function showNextSlide() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }
+  
+    setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+  </script>
+  
+</html>
